@@ -20,10 +20,12 @@ body {
 }
 
 main {
-  min-height: calc(100vh - 30px);
+  min-height: calc(100vh - 70px);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "League Spartan", sans-serif;
+
 }
 
 p {
@@ -31,7 +33,7 @@ p {
   line-height: 1.5rem;
 }
 .content {
-  max-width: 70rem;
+  max-width: 65rem;
   margin: 3rem;
 }
 
@@ -39,9 +41,7 @@ p {
   display: flex;
   justify-content: space-between;
   color: var(--dark-pink);
-  font-family: "League Spartan", sans-serif;
   margin-bottom: 3rem;
-  
 }
 
 .title {
@@ -50,18 +50,19 @@ p {
 }
 
 .top-left {
-  display: inline-block;
-  max-width: 25rem;
-  
+  max-width: 23rem;
 }
 
 .top-left p {
   color: var(--grey);
   margin-top: 2rem;
+  font-weight: 600;
 }
 
 .top-right {
   margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .rates {
@@ -71,14 +72,15 @@ p {
   background-color: var(--rates-bcg);
   padding: 0.8rem 2rem;
   border-radius: 0.5rem;
-  text-wrap:nowrap;
+  text-wrap: nowrap;
+  font-weight: 600;
 }
 
-.rates:nth-child(1){
+.rates:nth-child(1) {
   transform: translateX(-3rem);
 }
 
-.rates:nth-child(3){
+.rates:nth-child(3) {
   transform: translateX(3rem);
 }
 
@@ -94,7 +96,7 @@ p {
 
 .bottom-wrapper {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .customer {
@@ -104,24 +106,96 @@ p {
   border-radius: 0.5rem;
 }
 
-.customer-name{
+.second {
+  transform: translateY(1rem);
+}
+
+.third {
+  transform: translateY(2rem);
+}
+
+.customer-name {
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   line-height: 1.5rem;
 }
 
 .customer-img {
   border-radius: 50%;
   width: 3rem;
-  margin-right: 2rem;
+  height: 3rem;
+  margin-right: 1.5rem;
 }
 
-
+.customer-name h2 {
+  font-size: 1rem;
+}
+.customer-name span {
+  color: var(--status);
+}
 
 .attribution {
+  margin-top: 2rem;
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+
+
+@media screen and (max-width:600px){
+  
+  .content{
+    margin: 8rem 1rem;
+    width: 20rem;
+  }
+
+  .top-left{
+    margin: auto;
+  }
+
+  .title{
+    text-align: center;
+  }
+
+  .top-left p {
+    color: var(--grey);
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .top-right {
+    margin-right: 0;
+  }
+
+  .rates {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: .5rem 0;
+    flex-direction: column;
+    padding: 0.8rem 0;
+  }
+
+  .stars{
+    display: flex;
+    justify-content: center;
+    gap: .5rem
+  }
+  
+  .top-wrapper, .bottom-wrapper {
+    flex-direction: column;
+  }
+  
+  .rates:nth-child(1), .rates:nth-child(3), .second, .third {
+    transform: none;
+  }
+  
+  .bottom-wrapper{
+    gap:1rem;
+  }
+
+  
 }
